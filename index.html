@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            var current;
+        </script>
+        <style>
+            .editable{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div><button id="myBtn">Bold</button></div>
+        <div class="editable" id="editable" contenteditable="">Editable content</div>
+            <script>
+                document.getElementById("myBtn").addEventListener("click", function(){
+                    document.execCommand("bold", false, null);
+                    document.getElementById("editable").focus();
+                });
+        </script>
+    </body>
+</html>
